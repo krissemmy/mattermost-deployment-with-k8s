@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: minio
-          image: quay.io/minio/minio:RELEASE.2024-09-01T00-00-00Z
+          image: quay.io/minio/minio:latest-cicd
           args:
             - server
             - /data

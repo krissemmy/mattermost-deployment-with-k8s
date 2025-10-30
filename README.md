@@ -8,6 +8,7 @@ helm upgrade --install ingress-nginx ingress-nginx \
   --repo https://kubernetes.github.io/ingress-nginx \
   --namespace mattermost --create-namespace
 ```
+
 ```bash
 kubectl get pods --namespace=mattermost
 ```
@@ -27,6 +28,7 @@ kubectl apply -f postgres/postgres-pv.yaml -n mattermost
 kubectl apply -f postgres/postgres-claim.yaml -n mattermost
 kubectl apply -f postgres/postgres-deployment.yaml -n mattermost
 kubectl apply -f postgres/postgres-service.yaml -n mattermost
+```
 
 ## Deploy MinIO (in-cluster)
 
@@ -144,13 +146,6 @@ make -C . all NAMESPACE=mattermost MM_HOST=team.viduli.dev \
 # Inspect status anytime
 make -C . status
 ```
-```
-
-
-
-
-
-
 
 
 ## Links
